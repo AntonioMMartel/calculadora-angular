@@ -1,6 +1,6 @@
 .base {
   background: url("../assets/popeyepng.png");
-  
+
   background-size: cover;
   overflow: hidden;
   background-position: center;
@@ -45,6 +45,10 @@ body {
   text-align: center;
   cursor: pointer;
   opacity: 0.7;
+}
+
+.keys-area {
+  user-select: none;
 }
 
 .keys:hover {
