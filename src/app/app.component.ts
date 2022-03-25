@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'POPEYE EL MATEMATICO';
   calc = '0';
   eval = '0';
   marilolaState = 0; // MUSICOTE
+
+  constructor() {}
+
+  ngOnInit() {
+    document.getElementsByTagName('audio')[0].play();
+  }
 
   clear(): void {
     this.calc = '0';
