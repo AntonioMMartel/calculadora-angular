@@ -1,19 +1,38 @@
-<h1>{{title}}</h1>
-
-<form>
-Text1: <input type="text" [(ngModel)]="text1" name="text1"> &nbsp;
-Text2: <input type="text" [(ngModel)]="text2" name="text2"><br/><br/>
-Num1: <input type="number" [(ngModel)]="num1" name="num1"> &nbsp;
-Num2: <input type="number" [(ngModel)]="num2" name="num2"><br/><br/>
-<br/>
-<input type="submit" value="Concatenate" (click)="concatenate()">&nbsp;
-<input type="submit" value="Upper" (click)="upper()">&nbsp;
-<input type="submit" value="Lower" (click)="lower()">&nbsp;
-<input type="submit" value="Find" (click)="find()">&nbsp;
-<input type="submit" value="Slice" (click)="slice()">&nbsp;
-<input type="submit" value="Length" (click)="length()">&nbsp;
-<input type="submit" value="Include" (click)="include()">&nbsp;
-<input type="submit" value="Split" (click)="split()"><br/>
-<br/>
-<p>Result: {{result}}</p>
-</form>
+<h1>{{ title }}</h1>
+<div class="keypad">
+    <table class="base">
+        <tr>
+            <td class="expressions evalExpression" colspan="4">{{ eval }}</td>
+        </tr>
+        <tr>
+            <td class="expressions" colspan="4">{{ calc }}</td>
+        </tr>
+        <tr>
+            <td class="keys clrkey" colspan="3" (click)="clear()">C</td>
+            <td class="keys optkey" (click)="pressSign('/')">÷</td>
+        </tr>
+        <tr>
+            <td class="keys numkey" (click)="pressKey('7')">7</td>
+            <td class="keys numkey" (click)="pressKey('8')">8</td>
+            <td class="keys numkey" (click)="pressKey('9')">9</td>
+            <td class="keys optkey" (click)="pressSign('*')">*</td>
+        </tr>
+        <tr>
+            <td class="keys numkey" (click)="pressKey('4')">4</td>
+            <td class="keys numkey" (click)="pressKey('5')">5</td>
+            <td class="keys numkey" (click)="pressKey('6')">6</td>
+            <td class="keys optkey" (click)="pressSign('+')">+</td>
+        </tr>
+        <tr>
+            <td class="keys numkey" (click)="pressKey('1')">1</td>
+            <td class="keys numkey" (click)="pressKey('2')">2</td>
+            <td class="keys numkey" (click)="pressKey('3')">3</td>
+            <td class="keys optkey" (click)="pressSign('-')">-</td>
+        </tr>
+        <tr>
+            <td class="keys numkey" colspan="2" (click)="pressKey('0')">0</td>
+            <td class="keys numkey" (click)="pressKey('.')">.</td>
+            <td class="keys optkey" (click)="evaluate()">=</td>
+        </tr>
+    </table>
+</div>
