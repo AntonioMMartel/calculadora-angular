@@ -12,7 +12,8 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
-body {
+h1 {
+  text-align: center;
 }
 
 .expressions {
@@ -21,20 +22,17 @@ body {
   text-align: right;
   overflow: auto;
 }
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
 
 .evalExpression {
   border-bottom: 1px solid black;
   font-size: 1.5em;
   overflow: auto;
-}
-
-.keypad {
-  width: 100%;
-  align-self: center;
-}
-
-.table {
-  width: 100%;
 }
 
 .keys {
@@ -53,4 +51,8 @@ body {
 
 .keys:hover {
   opacity: 0.85;
+}
+
+.marilola {
+  padding: 2em;
 }

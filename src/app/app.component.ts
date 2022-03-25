@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'POPEYE EL MATEMATICO';
   calc = '0';
   eval = '0';
+  marilolaState = 0; // MUSICOTE
 
   clear(): void {
     this.calc = '0';
@@ -72,20 +73,15 @@ export class AppComponent {
     }
   }
 
-  MUSICOTE(): void {
-    let a = 0;
-    document
-      .getElementsByTagName('i')[0]
-      .addEventListener('click', function () {
-        if (a == 0) {
-          document.getElementsByTagName('audio')[0].play();
-          a++;
-          // document.querySelector('i').style.opacity = '1';
-        } else {
-          // document.querySelector('audio').pause();
-          a--;
-          // document.querySelector('i').style.opacity = '.5';
-        }
-      });
+  toggleMUSICOTE(image: any): void {
+    if (this.marilolaState == 0) {
+      document.getElementsByTagName('audio')[0].play();
+      this.marilolaState++;
+      image.src = '../assets/MarilolaEnjoyingPopeyeTheme.png';
+    } else {
+      document.getElementsByTagName('audio')[0].pause();
+      this.marilolaState--;
+      image.src = '../assets/MarilolaNotEnjoyingPopeyeTheme.png';
+    }
   }
 }
