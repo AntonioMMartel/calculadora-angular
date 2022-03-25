@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Calculadora crema klk';
+  title = 'POPEYE EL MATEMATICO';
   calc = '0'
   eval = '0'
 

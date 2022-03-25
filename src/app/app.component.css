@@ -1,0 +1,52 @@
+.base {
+  background: url("../assets/popeyepng.png");
+  
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  margin-top: 5vh;
+  border: 3px solid black;
+  width: 330px;
+  height: 670px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+}
+
+.expressions {
+  padding: 5%;
+  font-size: 2em;
+  text-align: right;
+  overflow: auto;
+}
+
+.evalExpression {
+  border-bottom: 1px solid black;
+  font-size: 1.5em;
+  overflow: auto;
+}
+
+.keypad {
+  width: 100%;
+  align-self: center;
+}
+
+.table {
+  width: 100%;
+}
+
+.keys {
+  margin: 0;
+  background: white;
+  padding: 1em;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.keys:hover {
+  opacity: 0.85;
+}
