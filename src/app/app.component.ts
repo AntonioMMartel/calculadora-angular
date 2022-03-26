@@ -17,9 +17,15 @@ export class AppComponent implements OnInit {
     document.getElementsByTagName('audio')[0].play();
   }
 
-  clear(): void {
-    this.calc = '0';
+  clearAll(): void {
+    this.calc = '';
     this.eval = '0';
+  }
+
+  delete(): void {
+    console.log(this.calc);
+    let _calc = this.calc.slice(0, -1);
+    this.calc = _calc;
   }
 
   pressKey(key: string): void {
@@ -75,7 +81,7 @@ export class AppComponent implements OnInit {
       this.calc.includes('*')
     ) {
       this.eval = this.calc;
-      this.calc = eval(this.calc);
+      this.calc = eval(this.calc).toString();
     }
   }
 

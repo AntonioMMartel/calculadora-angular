@@ -1,46 +1,46 @@
 <h1>{{ title }}</h1>
-<iframe src="/assets/PopeyeIntro.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
 <audio controls autoplay loop hidden>
     <source src="/assets/PopeyeIntro.mp3" type="audio/mpeg">
 </audio>
 <div class="main">
-    <div class="keypad">
-        <table class="base">
+    <div>
+        <table class="calculadora">
             <tr>
-                <td class="expressions evalExpression" colspan="4">{{ eval }}</td>
+                <td class="display exprAnterior" colspan="4">{{ eval }}</td>
             </tr>
             <tr>
-                <td class="expressions" colspan="4">{{ calc }}</td>
+                <td class="display" colspan="4">{{ calc }}</td>
             </tr>
-            <tr class="keys-area">
-                <td class="keys clrkey" colspan="3" (click)="clear()">C</td>
-                <td class="keys optkey" (click)="pressSign('/')">÷</td>
+            <tr class="area-teclas">
+                <td class="tecla" colspan="2" (click)="clearAll()">CE</td>
+                <td class="tecla" (click)="delete()">←</td>
+                <td class="tecla" (click)="pressSign('/')">÷</td>
             </tr>
-            <tr class="keys-area">
-                <td class="keys numkey" (click)="pressKey('7')">7</td>
-                <td class="keys numkey" (click)="pressKey('8')">8</td>
-                <td class="keys numkey" (click)="pressKey('9')">9</td>
-                <td class="keys optkey" (click)="pressSign('*')">*</td>
+            <tr class="area-teclas">
+                <td class="tecla" (click)="pressKey('7')">7</td>
+                <td class="tecla" (click)="pressKey('8')">8</td>
+                <td class="tecla" (click)="pressKey('9')">9</td>
+                <td class="tecla" (click)="pressSign('*')">*</td>
             </tr>
-            <tr class="keys-area">
+            <tr class="area-teclas">
 
-                <td class="keys numkey" (click)="pressKey('4')">4</td>
-                <td class="keys numkey" (click)="pressKey('5')">5</td>
-                <td class="keys numkey" (click)="pressKey('6')">6</td>
-                <td class="keys optkey" (click)="pressSign('+')">+</td>
+                <td class="tecla" (click)="pressKey('4')">4</td>
+                <td class="tecla" (click)="pressKey('5')">5</td>
+                <td class="tecla" (click)="pressKey('6')">6</td>
+                <td class="tecla" (click)="pressSign('+')">+</td>
             </tr>
-            <tr class="keys-area">
+            <tr class="area-teclas">
 
-                <td class="keys numkey" (click)="pressKey('1')">1</td>
-                <td class="keys numkey" (click)="pressKey('2')">2</td>
-                <td class="keys numkey" (click)="pressKey('3')">3</td>
-                <td class="keys optkey" (click)="pressSign('-')">-</td>
+                <td class="tecla" (click)="pressKey('1')">1</td>
+                <td class="tecla" (click)="pressKey('2')">2</td>
+                <td class="tecla" (click)="pressKey('3')">3</td>
+                <td class="tecla" (click)="pressSign('-')">-</td>
             </tr>
-            <tr class="keys-area">
+            <tr class="area-teclas">
 
-                <td class="keys numkey" colspan="2" (click)="pressKey('0')">0</td>
-                <td class="keys numkey" (click)="pressKey('.')">.</td>
-                <td class="keys optkey" (click)="evaluate()">=</td>
+                <td class="tecla" colspan="2" (click)="pressKey('0')">0</td>
+                <td class="tecla" (click)="pressKey('.')">.</td>
+                <td class="tecla" (click)="evaluate()">=</td>
             </tr>
         </table>
     </div>

@@ -1,41 +1,37 @@
-.base {
+.calculadora {
   background: url("../assets/popeyepng.png");
-
   background-size: cover;
-  overflow: hidden;
   background-position: center;
+  font-family: sans-serif;
   margin-top: 5vh;
   border: 3px solid black;
-  width: 330px;
   height: 670px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  width: 330px;
+  overflow: hidden;
 }
 
 h1 {
   text-align: center;
 }
 
-.expressions {
-  padding: 5%;
+.display {
+  padding: 4.5%;
   font-size: 2em;
   text-align: right;
-  overflow: auto;
 }
+
 .main {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   width: 100%;
 }
 
-.evalExpression {
+.exprAnterior {
   border-bottom: 1px solid black;
   font-size: 1.5em;
-  overflow: auto;
 }
 
-.keys {
+.tecla {
   margin: 0;
   background: white;
   padding: 1em;
@@ -45,7 +41,7 @@ h1 {
   opacity: 0.7;
 }
 
-.keys-area {
+.area-teclas {
   user-select: none;
 }
 
